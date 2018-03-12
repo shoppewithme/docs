@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;http&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,7 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="http">http</a>
+              <a href="#" data-language-name="shell">shell</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -241,21 +241,115 @@
                     <a href="#get-all-items" class="toc-h2 toc-link" data-title="get-all-items">Get All Items</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="get-a-specific-kitten">Get a Specific Kitten</a>
+                    <a href="#create-new-item" class="toc-h2 toc-link" data-title="create-new-item">Create New Item</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
+                    <a href="#get-a-specific-item" class="toc-h2 toc-link" data-title="get-a-specific-item">Get a Specific Item</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-item" class="toc-h2 toc-link" data-title="delete-a-specific-item">Delete a Specific Item</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#categories" class="toc-h1 toc-link" data-title="categories">Categories</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-categories" class="toc-h2 toc-link" data-title="get-all-categories">Get All Categories</a>
+                  </li>
+                  <li>
+                    <a href="#create-new-category" class="toc-h2 toc-link" data-title="create-new-category">Create New Category</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-category" class="toc-h2 toc-link" data-title="get-a-specific-category">Get a Specific Category</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-category" class="toc-h2 toc-link" data-title="delete-a-specific-category">Delete a Specific Category</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#item-options" class="toc-h1 toc-link" data-title="item-options">Item Options</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-options" class="toc-h2 toc-link" data-title="get-all-options">Get All Options</a>
+                  </li>
+                  <li>
+                    <a href="#create-new-option" class="toc-h2 toc-link" data-title="create-new-option">Create New Option</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-option" class="toc-h2 toc-link" data-title="get-a-specific-option">Get a Specific Option</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-option" class="toc-h2 toc-link" data-title="delete-a-specific-option">Delete a Specific Option</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#sales" class="toc-h1 toc-link" data-title="sales">Sales</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-options" class="toc-h2 toc-link" data-title="get-all-options">Get All Options</a>
+                  </li>
+                  <li>
+                    <a href="#create-new-option" class="toc-h2 toc-link" data-title="create-new-option">Create New Option</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-option" class="toc-h2 toc-link" data-title="get-a-specific-option">Get a Specific Option</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-option" class="toc-h2 toc-link" data-title="delete-a-specific-option">Delete a Specific Option</a>
                   </li>
               </ul>
           </li>
           <li>
             <a href="#orders" class="toc-h1 toc-link" data-title="orders">Orders</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-options" class="toc-h2 toc-link" data-title="get-all-options">Get All Options</a>
+                  </li>
+                  <li>
+                    <a href="#create-new-option" class="toc-h2 toc-link" data-title="create-new-option">Create New Option</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-option" class="toc-h2 toc-link" data-title="get-a-specific-option">Get a Specific Option</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-option" class="toc-h2 toc-link" data-title="delete-a-specific-option">Delete a Specific Option</a>
+                  </li>
+              </ul>
           </li>
           <li>
-            <a href="#checkout" class="toc-h1 toc-link" data-title="checkout">Checkout</a>
+            <a href="#checkouts" class="toc-h1 toc-link" data-title="checkouts">Checkouts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-options" class="toc-h2 toc-link" data-title="get-all-options">Get All Options</a>
+                  </li>
+                  <li>
+                    <a href="#create-new-option" class="toc-h2 toc-link" data-title="create-new-option">Create New Option</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-option" class="toc-h2 toc-link" data-title="get-a-specific-option">Get a Specific Option</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-option" class="toc-h2 toc-link" data-title="delete-a-specific-option">Delete a Specific Option</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#popup-sales" class="toc-h1 toc-link" data-title="popup-sales">Popup Sales</a>
+          </li>
+          <li>
+            <a href="#album-sales" class="toc-h1 toc-link" data-title="album-sales">Album Sales</a>
+          </li>
+          <li>
+            <a href="#live-sales" class="toc-h1 toc-link" data-title="live-sales">Live Sales</a>
           </li>
           <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
+          </li>
+          <li>
+            <a href="#webhooks" class="toc-h1 toc-link" data-title="webhooks">Webhooks</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -287,37 +381,60 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p>Make sure to replace <code>[authorizationtoken]</code> with your API key.</p>
 </blockquote>
 
-<p>Shoppe uses API keys to allow access to the API. You can register a new Shoppe API key at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a>.</p>
+<p>Shoppe uses app credentials to get authorization tokens to allow access to the API. You can register a new app at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a> to recieve your app credentials.</p>
 
-<p>Shoppe expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Shoppe expects for the authorization token to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code>Authorization: Bearer [authorizationtoken]</code></p>
 
 <aside class="notice">
 You must replace <code>[authorizationtoken]</code> with your personal API key.
 </aside>
-<h2 id='getting-an-authorization-token'>Getting An Authorization Token</h2><h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+<h2 id='getting-an-authorization-token'>Getting An Authorization Token</h2>
+<p>In order to gain access to receive an authorization token, your must first register your application at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a>.</p>
+
+<p>An authorization token can be created by using several different auth flows.</p>
+<h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/items"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dress"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What a gorgeous dress!"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Category&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Option&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_medium"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">65.97</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shoes"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What a gorgeous dress!"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Category&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Option&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_medium"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all items in a paginated list.</p>
 <h3 id='http-request'>HTTP Request</h3>
@@ -331,19 +448,19 @@ You must replace <code>[authorizationtoken]</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>cid</td>
+<td>categories</td>
 <td>null</td>
-<td>The id of a category. If a category id is included, items from that category will be returned.</td>
+<td>Comma-delimited list of category ids. Items from those categories will be returned.</td>
 </tr>
 <tr>
-<td>past</td>
-<td>false</td>
-<td>If set to true, the result will include only items that are unavailable.</td>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include only items that are unavailable (quantity &lt; 1 or active=false).</td>
 </tr>
 <tr>
-<td>size</td>
+<td>options</td>
 <td>null</td>
-<td>The id of a size. The result will include items from that size.</td>
+<td>Comma-delimited list of option ids. The result will include items from those options.</td>
 </tr>
 <tr>
 <td>page</td>
@@ -358,7 +475,7 @@ You must replace <code>[authorizationtoken]</code> with your personal API key.
 <tr>
 <td>term</td>
 <td>null</td>
-<td>The result will include items that match that term.</td>
+<td>The result will include items that match that term based on a keyword search.</td>
 </tr>
 <tr>
 <td>ids</td>
@@ -366,41 +483,67 @@ You must replace <code>[authorizationtoken]</code> with your personal API key.
 <td>Comma-delimited list of item ids. The result will only return those ids if they exist.</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='create-new-item'>Create New Item</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/items"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shoes"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What a gorgeous dress!"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Category&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Option&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image_medium"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image_small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image_thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>This endpoint creates a new item and returns it.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>POST /items</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-a-specific-item'>Get a Specific Item</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/items/2"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shoes"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What a gorgeous dress!"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Category&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&lt;Option&gt;</span><span class="p">,</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image_medium"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image_small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image_thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific item.</p>
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /items/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -410,36 +553,23 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>The ID of the item to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
+<h2 id='delete-a-specific-item'>Delete a Specific Item</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/items/2"</span>
   -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<p>This endpoint deletes a specific item.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://api.shoppewith.me/1.1/items/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -449,125 +579,609 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>The ID of the item to delete</td>
 </tr>
 </tbody></table>
-<h1 id='orders'>Orders</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h1 id='categories'>Categories</h1><h2 id='get-all-categories'>Get All Categories</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/categories"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dress"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">65.97</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shoes"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all categories in a paginated list.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /categories</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>options_available</td>
+<td>false</td>
+<td>Returns categories with optional list of available options for each category.</td>
 </tr>
 </tbody></table>
-<h1 id='checkout'>Checkout</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h2 id='create-new-category'>Create New Category</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/categories"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shoes"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new category and returns it.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /categories</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-a-specific-category'>Get a Specific Category</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/categories/2"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shoes"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/image.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific category.</p>
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /categories/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>ID</td>
+<td>The ID of the category to retrieve</td>
 </tr>
 </tbody></table>
+<h2 id='delete-a-specific-category'>Delete a Specific Category</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/categories/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific category.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://api.shoppewith.me/1.1/categories/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the category to delete</td>
+</tr>
+</tbody></table>
+<h1 id='item-options'>Item Options</h1><h2 id='get-all-options'>Get All Options</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Green"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all options in a paginated list.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /options</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='create-new-option'>Create New Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new option and returns it.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /options</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-a-specific-option'>Get a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific option.</p>
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-option'>Delete a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific option.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://api.shoppewith.me/1.1/options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to delete</td>
+</tr>
+</tbody></table>
+<h1 id='sales'>Sales</h1><h2 id='get-all-options'>Get All Options</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/sales"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Green"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all options in a paginated list.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /options</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='create-new-option'>Create New Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new option and returns it.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /options</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-a-specific-option'>Get a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific option.</p>
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-option'>Delete a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific option.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://api.shoppewith.me/1.1/options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to delete</td>
+</tr>
+</tbody></table>
+<h1 id='orders'>Orders</h1><h2 id='get-all-options'>Get All Options</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/sales"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Green"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all options in a paginated list.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /options</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='create-new-option'>Create New Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new option and returns it.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /options</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-a-specific-option'>Get a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific option.</p>
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-option'>Delete a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific option.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://api.shoppewith.me/1.1/options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to delete</td>
+</tr>
+</tbody></table>
+<h1 id='checkouts'>Checkouts</h1><h2 id='get-all-options'>Get All Options</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/sales"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Green"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all options in a paginated list.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /options</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='create-new-option'>Create New Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new option and returns it.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /options</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-a-specific-option'>Get a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floral"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;OptionGroup&gt;</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific option.</p>
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-option'>Delete a Specific Option</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/options/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific option.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://api.shoppewith.me/1.1/options/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the option to delete</td>
+</tr>
+</tbody></table>
+<h1 id='popup-sales'>Popup Sales</h1>
+<p>Coming soon... 🤗</p>
+<h1 id='album-sales'>Album Sales</h1>
+<p>Coming soon... 🤗</p>
+<h1 id='live-sales'>Live Sales</h1>
+<p>Coming soon... 🤗</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
@@ -626,11 +1240,13 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 <td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
+<h1 id='webhooks'>Webhooks</h1>
+<p>Coming soon... 🤗</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="http">http</a>
+                <a href="#" data-language-name="shell">shell</a>
           </div>
       </div>
     </div>
