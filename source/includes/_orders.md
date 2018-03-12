@@ -1,22 +1,130 @@
 # Orders
 
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+## Get All Options
 
-The Kittn API uses the following error codes:
+```shell
+curl "https://api.shoppewith.me/1.1/sales"
+  -H "Authorization: Bearer [authorizationtoken]"
+```
 
+> The above command returns JSON structured like this:
 
-Error Code | Meaning
----------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The kitten requested is hidden for administrators only.
-404 | Not Found -- The specified kitten could not be found.
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+```json
+{
+  "data": [{
+    "id": 1,
+    "title": "Green",
+    "group": <OptionGroup>,
+    "user": 7,
+  },
+  {
+    "id": 1,
+    "title": "Floral",
+    "group": <OptionGroup>,
+    "user": 7,
+  }],
+  "page": 1,
+  "count": 10,
+  "pages": 100
+}
+```
+
+This endpoint retrieves all options in a paginated list.
+
+### HTTP Request
+
+`GET /options`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+
+## Create New Option
+
+```shell
+curl "https://api.shoppewith.me/1.1/options"
+  -H "Authorization: Bearer [authorizationtoken]"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 1,
+  "title": "Floral",
+  "group": <OptionGroup>,
+  "user": 7,
+}
+```
+
+This endpoint creates a new option and returns it.
+
+### HTTP Request
+
+`POST /options`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+
+## Get a Specific Option
+
+```shell
+curl "https://api.shoppewith.me/1.1/options/2"
+  -H "Authorization: Bearer [authorizationtoken]"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 1,
+  "title": "Floral",
+  "group": <OptionGroup>,
+  "user": 7,
+}
+```
+
+This endpoint retrieves a specific option.
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+
+### HTTP Request
+
+`GET /options/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the option to retrieve
+
+## Delete a Specific Option
+
+```shell
+curl "https://api.shoppewith.me/1.1/options/2"
+  -X DELETE
+  -H "Authorization: Bearer [authorizationtoken]"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "success": true
+}
+```
+
+This endpoint deletes a specific option.
+
+### HTTP Request
+
+`DELETE https://api.shoppewith.me/1.1/options/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the option to delete

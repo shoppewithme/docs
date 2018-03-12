@@ -1,9 +1,9 @@
-# Checkouts
+# Item Options
 
 ## Get All Options
 
 ```shell
-curl "https://api.shoppewith.me/1.1/sales"
+curl "https://api.shoppewith.me/1.1/options"
   -H "Authorization: Bearer [authorizationtoken]"
 ```
 

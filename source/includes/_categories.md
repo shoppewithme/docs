@@ -1,9 +1,9 @@
-# Checkouts
+# Categories
 
-## Get All Options
+## Get All Categories
 
 ```shell
-curl "https://api.shoppewith.me/1.1/sales"
+curl "https://api.shoppewith.me/1.1/categories"
   -H "Authorization: Bearer [authorizationtoken]"
 ```
 
@@ -13,15 +13,17 @@ curl "https://api.shoppewith.me/1.1/sales"
 {
   "data": [{
     "id": 1,
-    "title": "Green",
-    "group": <OptionGroup>,
+    "title": "Dress",
     "user": 7,
+    "image": "path/to/image.jpg",
+    "price": 65.97
   },
   {
-    "id": 1,
-    "title": "Floral",
-    "group": <OptionGroup>,
+    "id": 2,
+    "title": "Shoes",
     "user": 7,
+    "image": "path/to/image.jpg",
+    "price": 100
   }],
   "page": 1,
   "count": 10,
@@ -29,21 +31,22 @@ curl "https://api.shoppewith.me/1.1/sales"
 }
 ```
 
-This endpoint retrieves all options in a paginated list.
+This endpoint retrieves all categories in a paginated list.
 
 ### HTTP Request
 
-`GET /options`
+`GET /categories`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
+options_available | false | Returns categories with optional list of available options for each category.
 
-## Create New Option
+## Create New Category
 
 ```shell
-curl "https://api.shoppewith.me/1.1/options"
+curl "https://api.shoppewith.me/1.1/categories"
   -H "Authorization: Bearer [authorizationtoken]"
 ```
 
@@ -51,28 +54,29 @@ curl "https://api.shoppewith.me/1.1/options"
 
 ```json
 {
-  "id": 1,
-  "title": "Floral",
-  "group": <OptionGroup>,
+  "id": 2,
+  "title": "Shoes",
   "user": 7,
+  "image": "path/to/image.jpg",
+  "price": 100
 }
 ```
 
-This endpoint creates a new option and returns it.
+This endpoint creates a new category and returns it.
 
 ### HTTP Request
 
-`POST /options`
+`POST /categories`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 
-## Get a Specific Option
+## Get a Specific Category
 
 ```shell
-curl "https://api.shoppewith.me/1.1/options/2"
+curl "https://api.shoppewith.me/1.1/categories/2"
   -H "Authorization: Bearer [authorizationtoken]"
 ```
 
@@ -80,31 +84,32 @@ curl "https://api.shoppewith.me/1.1/options/2"
 
 ```json
 {
-  "id": 1,
-  "title": "Floral",
-  "group": <OptionGroup>,
+  "id": 2,
+  "title": "Shoes",
   "user": 7,
+  "image": "path/to/image.jpg",
+  "price": 100
 }
 ```
 
-This endpoint retrieves a specific option.
+This endpoint retrieves a specific category.
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
 
 ### HTTP Request
 
-`GET /options/<ID>`
+`GET /categories/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the option to retrieve
+ID | The ID of the category to retrieve
 
-## Delete a Specific Option
+## Delete a Specific Category
 
 ```shell
-curl "https://api.shoppewith.me/1.1/options/2"
+curl "https://api.shoppewith.me/1.1/categories/2"
   -X DELETE
   -H "Authorization: Bearer [authorizationtoken]"
 ```
@@ -117,14 +122,14 @@ curl "https://api.shoppewith.me/1.1/options/2"
 }
 ```
 
-This endpoint deletes a specific option.
+This endpoint deletes a specific category.
 
 ### HTTP Request
 
-`DELETE https://api.shoppewith.me/1.1/options/<ID>`
+`DELETE https://api.shoppewith.me/1.1/categories/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the option to delete
+ID | The ID of the category to delete

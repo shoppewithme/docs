@@ -3,29 +3,48 @@
 ## Get All Items
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl "https://api.shoppewith.me/1.1/items"
+  -H "Authorization: Bearer [authorizationtoken]"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
+{
+  "data": [{
     "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+    "title": "Dress",
+    "description": "What a gorgeous dress!",
+    "categories": [<Category>,...],
+    "options": [<Option>,...],
+    "available": true,
+    "user": 7,
+    "image": "path/to/image.jpg",
+    "image_medium": "path/to/image.jpg",
+    "image_small": "path/to/image.jpg",
+    "image_thumb": "path/to/image.jpg",
+    "quantity": 1,
+    "price": 65.97
   },
   {
     "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+    "title": "Shoes",
+    "description": "What a gorgeous dress!",
+    "categories": [<Category>,...],
+    "options": [<Option>,...],
+    "available": true,
+    "user": 7,
+    "image": "path/to/image.jpg",
+    "image_medium": "path/to/image.jpg",
+    "image_small": "path/to/image.jpg",
+    "image_thumb": "path/to/image.jpg",
+    "quantity": 23,
+    "price": 100
+  }],
+  "page": 1,
+  "count": 10,
+  "pages": 100
+}
 ```
 
 This endpoint retrieves all items in a paginated list.
@@ -38,44 +57,19 @@ This endpoint retrieves all items in a paginated list.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-cid | null | The id of a category. If a category id is included, items from that category will be returned.
-past | false | If set to true, the result will include only items that are unavailable.
-size | null | The id of a size. The result will include items from that size.
+categories | null | Comma-delimited list of category ids. Items from those categories will be returned.
+available | true | If set to false, the result will include only items that are unavailable (quantity < 1 or active=false).
+options | null | Comma-delimited list of option ids. The result will include items from those options.
 page | 1 | The result will include items from that page.
 limit | 10 | The number of items to be returned.
-term | null | The result will include items that match that term.
+term | null | The result will include items that match that term based on a keyword search.
 ids | null | Comma-delimited list of item ids. The result will only return those ids if they exist.
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+## Create New Item
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+curl "https://api.shoppewith.me/1.1/items"
+  -H "Authorization: Bearer [authorizationtoken]"
 ```
 
 > The above command returns JSON structured like this:
@@ -83,73 +77,97 @@ let max = api.kittens.get(2);
 ```json
 {
   "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "title": "Shoes",
+  "description": "What a gorgeous dress!",
+  "categories": [<Category>,...],
+  "options": [<Option>,...],
+  "available": true,
+  "user": 7,
+  "image": "path/to/image.jpg",
+  "image_medium": "path/to/image.jpg",
+  "image_small": "path/to/image.jpg",
+  "image_thumb": "path/to/image.jpg",
+  "quantity": 23,
+  "price": 100
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+This endpoint creates a new item and returns it.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`POST /items`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+
+## Get a Specific Item
+
+```shell
+curl "https://api.shoppewith.me/1.1/items/2"
+  -H "Authorization: Bearer [authorizationtoken]"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "title": "Shoes",
+  "description": "What a gorgeous dress!",
+  "categories": [<Category>,...],
+  "options": [<Option>,...],
+  "available": true,
+  "user": 7,
+  "image": "path/to/image.jpg",
+  "image_medium": "path/to/image.jpg",
+  "image_small": "path/to/image.jpg",
+  "image_thumb": "path/to/image.jpg",
+  "quantity": 23,
+  "price": 100
+}
+```
+
+This endpoint retrieves a specific item.
+
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
+
+### HTTP Request
+
+`GET /items/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the item to retrieve
 
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
+## Delete a Specific Item
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.shoppewith.me/1.1/items/2"
   -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+  -H "Authorization: Bearer [authorizationtoken]"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "deleted" : ":("
+  "success": true
 }
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint deletes a specific item.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE https://api.shoppewith.me/1.1/items/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete
+ID | The ID of the item to delete

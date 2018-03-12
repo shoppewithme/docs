@@ -1,4 +1,4 @@
-# Checkouts
+# Sales
 
 ## Get All Options
 
