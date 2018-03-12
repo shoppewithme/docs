@@ -477,6 +477,14 @@ html, body {
     &.success {
       background-color: $aside-success-bg;
     }
+
+    &.notice {
+      color: #fff;
+
+      code {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 
   aside:before {
