@@ -222,16 +222,13 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#registering-your-application" class="toc-h2 toc-link" data-title="registering-your-application">Registering Your Application</a>
+                    <a href="#registering-your-app-with-shoppe" class="toc-h2 toc-link" data-title="registering-your-app-with-shoppe">Registering Your App With Shoppe</a>
                   </li>
               </ul>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
               <ul class="toc-list-h2">
-                  <li>
-                    <a href="#registering-your-app-with-shoppe" class="toc-h2 toc-link" data-title="registering-your-app-with-shoppe">Registering Your App With Shoppe</a>
-                  </li>
                   <li>
                     <a href="#permissions" class="toc-h2 toc-link" data-title="permissions">Permissions</a>
                   </li>
@@ -382,29 +379,6 @@
 <aside class="notice">
 All requests to the api should be made to <code>https://api.shoppewith.me/1.1/[api_endpoint]</code>
 </aside>
-<h2 id='registering-your-application'>Registering Your Application</h2>
-<p>To register your application and get your client id and secret, simply register a new application on our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a></p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>[authorizationtoken]</code> with your API key.</p>
-</blockquote>
-
-<p>Shoppe uses app credentials to get authorization tokens to allow access to the API. You can register a new app at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a> to recieve your app credentials.</p>
-
-<p>Shoppe expects for the authorization token to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: Bearer [authorizationtoken]</code></p>
-
-<aside class="notice">
-You must replace <code>[authorizationtoken]</code> with your personal API key.
-</aside>
 <h2 id='registering-your-app-with-shoppe'>Registering Your App With Shoppe</h2>
 <p>Registering your application is the first step to get started using the Shoppe API.</p>
 
@@ -432,6 +406,27 @@ You must replace <code>[authorizationtoken]</code> with your personal API key.
 </ol></li>
 <li>Take note of your <code>client id</code> and <code>client secret</code> as those will be used to get a user access token</li>
 </ol>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>[authorizationtoken]</code> with your API key.</p>
+</blockquote>
+
+<p>Shoppe uses app credentials to get authorization tokens to allow access to the API. You can register a new app at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a> to recieve your app credentials.</p>
+
+<p>Shoppe expects for the authorization token to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: Bearer [authorizationtoken]</code></p>
+
+<aside class="notice">
+You must replace <code>[authorizationtoken]</code> with your personal API key.
+</aside>
 <h2 id='permissions'>Permissions</h2>
 <p>Shoppe uses scoped permissions to gain access to certain types of endpoints. The following scopes are available and will need to be requested at the time that an auth token is created:</p>
 
