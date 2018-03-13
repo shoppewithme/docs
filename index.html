@@ -230,7 +230,19 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#registering-your-app-with-shoppe" class="toc-h2 toc-link" data-title="registering-your-app-with-shoppe">Registering Your App With Shoppe</a>
+                  </li>
+                  <li>
+                    <a href="#permissions" class="toc-h2 toc-link" data-title="permissions">Permissions</a>
+                  </li>
+                  <li>
                     <a href="#getting-an-authorization-token" class="toc-h2 toc-link" data-title="getting-an-authorization-token">Getting An Authorization Token</a>
+                  </li>
+                  <li>
+                    <a href="#refreshing-an-auth-token" class="toc-h2 toc-link" data-title="refreshing-an-auth-token">Refreshing an Auth Token</a>
+                  </li>
+                  <li>
+                    <a href="#revoking-an-auth-token" class="toc-h2 toc-link" data-title="revoking-an-auth-token">Revoking an Auth Token</a>
                   </li>
               </ul>
           </li>
@@ -346,6 +358,9 @@
             <a href="#live-sales" class="toc-h1 toc-link" data-title="live-sales">Live Sales</a>
           </li>
           <li>
+            <a href="#follows" class="toc-h1 toc-link" data-title="follows">Follows</a>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
           <li>
@@ -390,11 +405,93 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>[authorizationtoken]</code> with your personal API key.
 </aside>
-<h2 id='getting-an-authorization-token'>Getting An Authorization Token</h2>
-<p>In order to gain access to receive an authorization token, your must first register your application at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a>.</p>
+<h2 id='registering-your-app-with-shoppe'>Registering Your App With Shoppe</h2>
+<p>Registering your application is the first step to get started using the Shoppe API.</p>
 
-<p>An authorization token can be created by using several different auth flows.</p>
-<h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/items"</span>
+<p>To get started, go to our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a>, and follow these steps:</p>
+
+<ol>
+<li>Go to our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a></li>
+<li>If you don&#39;t already have a Shoppe account, you will need to register an account.
+
+<ol>
+<li>Click &quot;Register&quot; down at the bottom of the login form</li>
+<li>Click the &quot;Buy&quot; button</li>
+<li>Fill in the required information and follow the prompts</li>
+</ol></li>
+<li>Click the &quot;New Application&quot; button on the <a href="https://www.shoppewith.me/oauth/applications/">&quot;Your Applications page&quot;</a></li>
+<li>Fill in the following information and click &quot;Save&quot;:
+
+<ol>
+<li><code>Name</code> should be the name of your application</li>
+<li><code>Client id</code> keep default</li>
+<li><code>Client secret</code> keep default</li>
+<li><code>Client type</code> change to <code>confidential</code></li>
+<li><code>Authorization grant type</code> change to <code>Resource owner password-based</code></li>
+<li><code>Redirect uris</code> leave blank</li>
+</ol></li>
+<li>Take note of your <code>client id</code> and <code>client secret</code> as those will be used to get a user access token</li>
+</ol>
+<h2 id='permissions'>Permissions</h2>
+<p>Shoppe uses scoped permissions to gain access to certain types of endpoints. The following scopes are available and will need to be requested at the time that an auth token is created:</p>
+
+<table><thead>
+<tr>
+<th>Scope</th>
+<th>Resources</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user</td>
+<td>User</td>
+</tr>
+<tr>
+<td>user_items</td>
+<td>Item, Category, Item Option</td>
+</tr>
+<tr>
+<td>user_orders</td>
+<td>Order, Sale</td>
+</tr>
+<tr>
+<td>user_popups</td>
+<td>PopupSale</td>
+</tr>
+<tr>
+<td>user_lives</td>
+<td>LiveSale</td>
+</tr>
+<tr>
+<td>user_albums</td>
+<td>AlbumSale</td>
+</tr>
+</tbody></table>
+<h2 id='getting-an-authorization-token'>Getting An Authorization Token</h2>
+<blockquote>
+<p>To get an authorization token, use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.shoppewith.me/oauth/token/"</span>
+  -X POST
+  -d <span class="s2">"grant_type=password&amp;username=[useremail]&amp;password=[userpassword]&amp;scope=user user_items user_orders user_popups user_lives user_albums"</span>
+  -u <span class="s2">"[yourclientid]:[yourclientsecret]"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>[useremail]</code> with the user&#39;s email, <code>[userpassword]</code> with the user&#39;s password, <code>[yourclientid]</code> with your app&#39;s client id, and <code>[yourclientsecret]</code> with your app&#39;s client secret.</p>
+
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hbdf7cBzYjx5a0yv2uMxqNfHCTC0c7"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">36000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user user_items user_orders user_popups user_lives user_albums"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0MjrdEKsNhlxXtnhEGemUiZ7BnebZp"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>In order to gain access to receive an authorization token, your must first register your application at our <a href="https://www.shoppewith.me/oauth/applications/">developer portal</a> and follow the steps to register your application.</p>
+
+<p>An authorization token can be created by using several different auth flows. The curl command to the right shows you an example request that will convert a user&#39;s email/password combo into an auth token.</p>
+<h2 id='refreshing-an-auth-token'>Refreshing an Auth Token</h2><h2 id='revoking-an-auth-token'>Revoking an Auth Token</h2><h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.shoppewith.me/1.1/items"</span>
   -H <span class="s2">"Authorization: Bearer [authorizationtoken]"</span>
 </code></pre>
 <blockquote>
@@ -1177,11 +1274,17 @@ You must replace <code>[authorizationtoken]</code> with your personal API key.
 </tr>
 </tbody></table>
 <h1 id='popup-sales'>Popup Sales</h1>
-<p>Coming soon... 🤗</p>
+<p>Popup sales are just one of the many sales channels that Shoppe users can produce income through.</p>
+
+<p>Endpoint documentation coming soon... 🤗</p>
 <h1 id='album-sales'>Album Sales</h1>
 <p>Coming soon... 🤗</p>
 <h1 id='live-sales'>Live Sales</h1>
-<p>Coming soon... 🤗</p>
+<p>Endpoint documentation coming soon... 🤗</p>
+<h1 id='follows'>Follows</h1>
+<p>Shoppe&#39;s API provides a powerful set of endpoints that allow users to follow other users and receive push, in-app, and email notifications based on user activity. For example, followers of a user will receive a notification when popups start.</p>
+
+<p>Endpoint documentation coming soon... 🤗</p>
 <h1 id='errors'>Errors</h1>
 <p>The Shoppe API uses the following error codes:</p>
 
