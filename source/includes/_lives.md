@@ -1,3 +1,3 @@
 # Live Sales
 
-Coming soon... 🤗
+Endpoint documentation coming soon... 🤗

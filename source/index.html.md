@@ -19,6 +19,7 @@ includes:
   - popups
   - albums
   - lives
+  - follows
   - errors
   - webhooks
 
