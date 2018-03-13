@@ -1183,11 +1183,7 @@ You must replace <code>[authorizationtoken]</code> with your personal API key.
 <h1 id='live-sales'>Live Sales</h1>
 <p>Coming soon... 🤗</p>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>The Shoppe API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -1205,15 +1201,15 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- The endpoint requested is hidden for administrators only.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified endpoint or data could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access an endpoint with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -1221,7 +1217,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>Gone -- The endpoint requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>418</td>
@@ -1229,7 +1225,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too much data! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
@@ -1241,7 +1237,65 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 </tbody></table>
 <h1 id='webhooks'>Webhooks</h1>
-<p>Coming soon... 🤗</p>
+<p>This is a list of all the types of events we currently send. We may add more at any time, so you shouldn&#39;t rely on only these types existing in your code.</p>
+
+<p>You&#39;ll notice that these events follow a pattern: resource.event. Our goal is to design a consistent system that makes things easier to anticipate and code against.</p>
+
+<table><thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>item.created</td>
+<td>Occurs whenever an item is created</td>
+</tr>
+<tr>
+<td>item.updated</td>
+<td>Occurs whenever an item is updated</td>
+</tr>
+<tr>
+<td>item.deleted</td>
+<td>Occurs whenever an item is deleted</td>
+</tr>
+<tr>
+<td>popup.created</td>
+<td>Occurs whenever a popup is created</td>
+</tr>
+<tr>
+<td>popup.updated</td>
+<td>Occurs whenever a popup is updated</td>
+</tr>
+<tr>
+<td>popup.deleted</td>
+<td>Occurs whenever a popup is deleted</td>
+</tr>
+<tr>
+<td>lives.created</td>
+<td>Occurs whenever a live is created</td>
+</tr>
+<tr>
+<td>lives.updated</td>
+<td>Occurs whenever a live is updated</td>
+</tr>
+<tr>
+<td>lives.deleted</td>
+<td>Occurs whenever a live is deleted</td>
+</tr>
+<tr>
+<td>albums.created</td>
+<td>Occurs whenever an album is created</td>
+</tr>
+<tr>
+<td>albums.updated</td>
+<td>Occurs whenever an album is updated</td>
+</tr>
+<tr>
+<td>albums.deleted</td>
+<td>Occurs whenever an album is deleted</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
